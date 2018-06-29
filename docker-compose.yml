@@ -1,0 +1,9 @@
+version: '3.6'
+services:
+  fabric:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: emyller/fabric:${DOCKER_TAG:-latest}
+    volumes:
+      - ./:/app
